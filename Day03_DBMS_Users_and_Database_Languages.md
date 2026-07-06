@@ -51,7 +51,7 @@ A Data Model is a blueprint used to organize and represent data inside a databas
 
 ## Hierarchical Model
 
-![Hierarchical Model](images/hierarchical_model.png)
+![Hierarchical Model](images/Hierarchical_model.png)
 
 - Tree structure
 - One parent can have many children but one child cannot have multiple parents.
