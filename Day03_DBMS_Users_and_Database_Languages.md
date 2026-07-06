@@ -7,6 +7,7 @@
 Interacts with the application to perform tasks like viewing, searching, and updating data.
 
 Example:
+
 - Student
 - Customer
 - Employee
@@ -18,6 +19,7 @@ Example:
 Responsible for managing the database.
 
 Responsibilities:
+
 - Backup
 - Recovery
 - Security
@@ -31,6 +33,7 @@ Responsibilities:
 Develops software that interacts with the database.
 
 Example:
+
 - Library Management System
 - Banking Application
 
@@ -48,16 +51,7 @@ A Data Model is a blueprint used to organize and represent data inside a databas
 
 ## Hierarchical Model
 
-
-College
-│
-├── AIML
-│      ├── Rahul
-│      └── Priya
-│
-└── CSE
-       ├── Arjun
-       └── Sneha
+![Hierarchical Model](images/hierarchical_model.png)
 
 - Tree structure
 - One parent can have many children but one child cannot have multiple parents.
@@ -74,14 +68,14 @@ Club A ---- Rahul ---- Club B
 ## Relational Model
 
 This is the KING.
+
 - Stores data in tables
 - Most widely used model
 - Uses SQL
-Ex:
-| ID | Name  | Branch |
-| -- | ----- | ------ |
-| 1  | Rahul | AIML   |
-
+  Ex:
+  | ID | Name | Branch |
+  | -- | ----- | ------ |
+  | 1 | Rahul | AIML |
 
 ---
 
@@ -89,19 +83,20 @@ Ex:
 
 - Four Types
 
- DDL
- ↓ 
- DML
- ↓
- DCL
- ↓
- TCL
+DDL
+↓
+DML
+↓
+DCL
+↓
+TCL
 
 ## DDL (Data Definition Language)
 
 Used to define or modify the database structure.
 
 Commands:
+
 - CREATE
 - ALTER
 - DROP
@@ -115,6 +110,7 @@ Commands:
 Used to manipulate data inside tables.
 
 Commands:
+
 - INSERT
 - UPDATE
 - DELETE
@@ -126,6 +122,7 @@ Commands:
 Used to control user permissions.
 
 Commands:
+
 - GRANT
 - REVOKE
 
@@ -136,6 +133,7 @@ Commands:
 Used to manage transactions.
 
 Commands:
+
 - COMMIT
 - ROLLBACK
 - SAVEPOINT
@@ -144,10 +142,10 @@ Commands:
 
 # Difference Between DDL and DML
 
-| DDL | DML |
-|-----|-----|
+| DDL                        | DML          |
+| -------------------------- | ------------ |
 | Changes database structure | Changes data |
-| CREATE TABLE | INSERT INTO |
+| CREATE TABLE               | INSERT INTO  |
 
 ---
 
