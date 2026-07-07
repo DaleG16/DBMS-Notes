@@ -12,11 +12,11 @@ Imagine You're Building a Hospital Management System
 
 Possible answers:
 
-Patient
-Doctor
-Nurse
-Medicine
-These are the main objects.
+- Patient
+- Doctor
+- Nurse
+- Medicine
+  These are the main objects.
 
 In DBMS, we call them "Entity"
 
@@ -159,9 +159,9 @@ Example: Age
 
 It is:
 
-Simple
-Single-valued
-Derived (if calculated)
+- Simple
+- Single-valued
+- Derived (if calculated)
 
 ---
 
