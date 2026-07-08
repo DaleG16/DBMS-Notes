@@ -170,7 +170,7 @@ For example:
 - Video
 - Comment
 
-**Relationship 1**
+**Relationship 1**<br>
 User ---- Watches ---- Video
 
 Can one user watch many videos?<br>
@@ -182,7 +182,7 @@ Yes.
 Therefore:
 M:N
 
-**Relationship 2**
+**Relationship 2**<br>
 User ---- Owns ---- Channel
 
 One user can own multiple channels.<br>
