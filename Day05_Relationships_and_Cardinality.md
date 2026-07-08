@@ -9,22 +9,22 @@ We have two entities.
 - Student
 - Course
 
-Are they independent?
+Are they independent?<br>
 No.
 
-Students enroll in courses.
+Students enroll in courses.<br>
 There is a connection.
 
 That connection is called a **Relationship**
 
-Entities in a database do not exist independently. They are connected with one another through relationships.
+Entities in a database do not exist independently. They are connected with one another through relationships.<br>
 The ER Model uses relationships to represent how entities interact.
 
 ---
 
 # Relationship
 
-A Relationship is an association between two or more entities.
+A Relationship is an association between two or more entities.<br>
 A relationship tells us how entities are connected.
 
 Examples:
@@ -48,7 +48,7 @@ One entity is related to itself.
 
 Example:
 
-Employee manages Employee.
+Employee manages Employee.<br>
 Same entity.
 
 ---
@@ -59,7 +59,7 @@ Two entities participate.
 
 Example:
 
-Student enrolls in Course.
+Student enrolls in Course.<br>
 This is the most common relationship.
 
 ---
@@ -85,8 +85,8 @@ Cardinality specifies how many instances of one entity can be associated with an
 Example:
 
 Person -------- Passport
-1 1
-Every person has exactly one passport.
+
+Every person has exactly one passport.<br>
 Every passport belongs to exactly one person.
 
 ---
@@ -97,7 +97,7 @@ Example:
 
 Teacher → Students
 
-One teacher teaches many students.
+One teacher teaches many students.<br>
 Each student has one class teacher.
 
 ---
@@ -106,7 +106,7 @@ Each student has one class teacher.
 
 Example:
 
-Students → Department
+Students → Department<br>
 Many students belong to one department.
 
 ---
@@ -151,7 +151,7 @@ Participation is optional.
 
 Example:
 
-Only some teachers are HODs.
+Only some teachers are HODs.<br>
 Not all the teachers can become HODs.
 
 ---
@@ -162,7 +162,7 @@ We daily use **Youtube** for entertainment, to gain knowledge and learn.
 
 What are the entities?
 
-we identify the objects inside YouTube.
+we identify the objects inside YouTube.<br>
 For example:
 
 - User
@@ -173,10 +173,10 @@ For example:
 **Relationship 1**
 User ---- Watches ---- Video
 
-Can one user watch many videos?
+Can one user watch many videos?<br>
 Yes.
 
-Can one video be watched by many users?
+Can one video be watched by many users?<br>
 Yes.
 
 Therefore:
@@ -185,7 +185,7 @@ M:N
 **Relationship 2**
 User ---- Owns ---- Channel
 
-One user can own multiple channels.
+One user can own multiple channels.<br>
 One channel belongs to one user.
 
 Therefore:
