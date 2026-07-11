@@ -1,4 +1,4 @@
-# 📚 DBMS Placement Journey
+# 📚 DBMS Learning Journey
 
 This repository contains my personal notes while learning Database Management Systems (DBMS) for software engineering placements.
 
