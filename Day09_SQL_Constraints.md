@@ -1,8 +1,28 @@
-# Day 9 - SQL Constraints
+# Day 9 - SQL Constraints(THE RULES OF A DATABASE)
 
 ## Introduction
 
-Constraints are rules applied to table columns to ensure the accuracy, consistency, and integrity of data.
+Constraints are rules applied to table columns to ensure the accuracy, consistency, and integrity of data.<br>
+Constraints prevent invalid data from entering the database
+
+Example:<br>
+
+Student Table
+
+| USN | Name|
+| 1 | Dale|
+
+Perfect.
+
+Now imagine someone inserts:
+
+|USN |Name|
+|NULL |Dale|
+
+Should this be allowed?<br>
+No.
+
+Constraints prevent this.
 
 ---
 
@@ -28,9 +48,11 @@ Example:
 Email VARCHAR(100) UNIQUE
 ```
 
+Every Email must be Unique.
+
 ---
 
-# PRIMARY KEY
+# PRIMARY KEY( Important Concept)
 
 A Primary Key uniquely identifies each record.
 
@@ -45,13 +67,23 @@ Example:
 StudentID INT PRIMARY KEY
 ```
 
+This automatically means:
+
+- Unique
+- NOT NULL
+
 ---
 
 # DEFAULT
 
-Assigns a default value when no value is provided.
+Assigns a default value when no value is provided.<br>
+Suppose every new student belongs to Semester 1 unless specified.
 
-Example:
+Instead of typing:<br>
+Semester = 1
+everytime,
+
+use:
 
 ```sql
 Semester INT DEFAULT 1
@@ -71,20 +103,10 @@ Age INT CHECK(Age>=18)
 
 ---
 
-# Key Points
+# Summary
 
 - Constraints maintain data integrity.
 - PRIMARY KEY = UNIQUE + NOT NULL.
 - UNIQUE prevents duplicate values.
 - DEFAULT assigns automatic values.
 - CHECK validates values before insertion.
-
----
-
-# Summary
-
-- NOT NULL → No empty values
-- UNIQUE → No duplicate values
-- PRIMARY KEY → Unique identifier
-- DEFAULT → Automatic value
-- CHECK → Validation rule
