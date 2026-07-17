@@ -6,23 +6,19 @@ A Foreign Key creates a connection between two tables.
 
 Lets Start with a Problem:
 
-+-------------------------+
-| Student |
-+-----------+-------------+
-| StudentID | Name |
-+-----------+-------------+
-| 101 | Pablo |
-| 102 | Rahul |
-+-----------+-------------+
+Student
 
-+-------------------------+
-| Course |
-+-----------+-------------+
+| StudentID | Name  |
+| --------- | ----- |
+| 101       | Pablo |
+| 102       | Rahul |
+
+Course
+
 | CourseID | CName |
-+-----------+-------------+
-| 1 | DBMS |
-| 2 | OS |
-+-----------+-------------+
+| -------- | ----- |
+| 1        | DBMS  |
+| 2        | OS    |
 
 Now suppose Pablo enrolls in DBMS.
 
@@ -36,13 +32,11 @@ No.
 
 **We need another table**.
 
-+-------------------------+
-| Enrollment |
-+-----------+-------------+
+Enrollment
+
 | StudentID | CourseID |
-+-----------+-------------+
-| 101 | 1 |  
-+-----------+-------------+
+| --------- | -------- |
+| 101       | 1        |
 
 How does SQL know that StudentID 101 actually belongs to Pablo?
 
@@ -86,13 +80,11 @@ Enrollment
 
 Imagine this:
 
-+-------------------------+
-| Enrollment |
-+-----------+-------------+
+Enrollment
+
 | StudentID | CourseID |
-+-----------+-------------+
-| 999 | 1 |  
-+-----------+-------------+
+| --------- | -------- |
+| 999       | 1        |
 
 But...<br>
 There is no student with ID 999.
@@ -113,34 +105,27 @@ Insertion fails.
 
 # Referential Integrity
 
-Referential Integrity ensures that every Foreign Key value matches an existing Primary Key value.
+Referential Integrity ensures that **every Foreign Key value matches an existing Primary Key value**.
 
 Example:<br>
-+-----------+
-| Student |
-+-----------+
-| StudentID |
-+-----------+
-| 101 |  
-+-----------+
 
-+-----------+
-|Enrollment |
-+-----------+
+Student
+
 | StudentID |
-+-----------+
-| 101 |  
-+-----------+
+| --------- |
+| 101       |
+
+Enrollment
+
+| StudentID |
+| --------- |
+| 101       |
 
 **VALID**
 
-+-----------+
-|Enrollment |
-+-----------+
 | StudentID |
-+-----------+
-| 999 |  
-+-----------+
+| --------- |
+| 999       |
 
 **Invalid**
 
