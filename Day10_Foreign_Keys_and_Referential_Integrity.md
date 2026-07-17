@@ -2,9 +2,52 @@
 
 ## Introduction
 
-A Foreign Key is used to establish a relationship between two tables.
+A Foreign Key creates a connection between two tables.
 
-It references the Primary Key of another table and helps maintain data consistency.
+Lets Start with a Problem:
+
++-------------------------+
+| Student |
++-----------+-------------+
+| StudentID | Name |
++-----------+-------------+
+| 101 | Pablo |
+| 102 | Rahul |
++-----------+-------------+
+
++-------------------------+
+| Course |
++-----------+-------------+
+| CourseID | CName |
++-----------+-------------+
+| 1 | DBMS |
+| 2 | OS |
++-----------+-------------+
+
+Now suppose Pablo enrolls in DBMS.
+
+Where do we store this?
+
+Inside Student?<br>
+No.
+
+Inside Course?<br>
+No.
+
+**We need another table**.
+
++-------------------------+
+| Enrollment |
++-----------+-------------+
+| StudentID | CourseID |
++-----------+-------------+
+| 101 | 1 |  
++-----------+-------------+
+
+How does SQL know that StudentID 101 actually belongs to Pablo?
+
+Answer:<br>
+Using a Foreign Key.
 
 ---
 
@@ -39,13 +82,90 @@ Example:
 
 Enrollment
 
+# Need of Foreign Key
+
+Imagine this:
+
++-------------------------+
+| Enrollment |
++-----------+-------------+
+| StudentID | CourseID |
++-----------+-------------+
+| 999 | 1 |  
++-----------+-------------+
+
+But...<br>
+There is no student with ID 999.
+
+Should the database allow this?<br>
+No.
+
+Without Foreign Keys, your database becomes inconsistent.
+
+With a Foreign Key, SQL says:
+
+"Before inserting StudentID 999, let me check whether StudentID 999 exists in the Student table."
+
+If not...<br>
+Insertion fails.
+
 ---
 
 # Referential Integrity
 
 Referential Integrity ensures that every Foreign Key value matches an existing Primary Key value.
 
-This prevents invalid references between tables.
+Example:<br>
++-----------+
+| Student |
++-----------+
+| StudentID |
++-----------+
+| 101 |  
++-----------+
+
++-----------+
+|Enrollment |
++-----------+
+| StudentID |
++-----------+
+| 101 |  
++-----------+
+
+**VALID**
+
++-----------+
+|Enrollment |
++-----------+
+| StudentID |
++-----------+
+| 999 |  
++-----------+
+
+**Invalid**
+
+Student 999 doesn't exist.<br>
+This rule is called Referential Integrity.
+
+**This prevents invalid references between tables.**
+
+### What Happens When Parent Data is Deleted?
+
+Now someone runs:
+
+DELETE FROM Student<br>
+WHERE StudentID=101;
+
+What happens to Enrollment?
+
+Student 101 disappears.
+
+Enrollment still says:<br>
+StudentID =101
+
+Broken data.
+
+SQL gives options
 
 ---
 
@@ -64,6 +184,28 @@ Sets the Foreign Key to NULL when the parent record is deleted.
 # RESTRICT
 
 Prevents deletion of the parent record if related child records exist.
+
+---
+
+## Complete Example
+
+```sql
+CREATE TABLE Student(
+    StudentID INT PRIMARY KEY,
+    Name VARCHAR(50) NOT NULL
+);
+```
+
+```sql
+CREATE TABLE Enrollment(
+
+    StudentID INT
+    FOREIGN KEY(StudentID)
+    REFERENCES Student(StudentID)
+);
+```
+
+Now, StudentID in Enrollment must exist in Student.
 
 ---
 
