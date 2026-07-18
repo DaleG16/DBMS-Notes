@@ -206,6 +206,8 @@ Now, StudentID in Enrollment must exist in Student.
 
 # Summary
 
+Foreign Keys are used to **establish relationships between tables and maintain referential integrity by ensuring that child records always reference valid parent records**.
+
 - Foreign Keys connect tables.
 - Foreign Keys reference Primary Keys.
 - Foreign Keys maintain Referential Integrity.
