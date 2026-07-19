@@ -52,17 +52,6 @@ WHERE Branch='AIML';
 
 ---
 
-# Comparison Operators
-
-- =
-- >
-- <
-- > =
-- <=
-- !=
-
----
-
 # AND
 
 Returns rows only if all conditions are true.
