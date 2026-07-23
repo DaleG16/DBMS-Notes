@@ -10,8 +10,7 @@ But what if the principal asks:
 
 "How many students are there in **each branch** ?"
 
-`GROUP BY` groups rows that have the same value in one or more columns.<br>
-It is commonly used with aggregate functions.
+`GROUP BY` is used to divide rows into groups based on one or more columns so that aggregate functions like COUNT, SUM, AVG, MIN, and MAX can be calculated separately for each group.
 
 ---
 
