@@ -51,7 +51,7 @@ Output:<br>
 
 ## Combining WHERE and HAVING
 
-Find branches whose average marks are above 85, but consider only students older than 20.
+Find branches whose average marks are above 80, but consider only students older than 20.
 
 ```sql
 SELECT Branch, AVG(Marks)
