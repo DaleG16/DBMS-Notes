@@ -110,6 +110,18 @@ GROUP BY Branch;
 Output:<br>
 ![Maximum](/images/GroupBy_Max.png)
 
+**Tip**
+
+> Whenever you see phrases like:
+
+> - per department
+> - for each student
+> - by category
+> - in every branch
+> - for every course
+
+> 💡Your brain should immediately think: GROUP BY!
+
 ---
 
 ## Summary
