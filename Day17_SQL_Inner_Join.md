@@ -63,14 +63,15 @@ ON Enrollment.StudentID = Student.StudentID
 INNER JOIN Course
 ON Enrollment.CourseID = Course.CourseID;
 ```
-
+<br>
+<br>
 **Basic Idea**
 
 1. Firstly I need to connect Enrollment Table to Student Table.
 2. Secondly I need to connect Enrollment Table to Course Table.
-
-
-
+<br>
+<br>
+<br>
 **Why Student.Name?**
 
 Imagine a large Database where both tables have a column called StudentID.
@@ -82,9 +83,9 @@ Instead, specify the table:<br>
 SELECT Student.StudentID
 
 That means StudentID is specifically from Student Table not any other table.
-
-
-
+<br>
+<br>
+<br>
 **Understanding the ON Clause**
 
 The line:<br>
@@ -97,9 +98,9 @@ means match rows where the Student IDs are equal.<br>
 The **ON clause** tells SQL **how the tables are related.**
 
 Here I have specifically written Enrollment.StudentID so that I want StudentID from the Enrollment Table not the Student Table.
-
-
-
+<br>
+<br>
+<br>
 **STEP-1 Enrollment INNER JOIN Student** (Happens Internally)
 
 Join with the Student table.
