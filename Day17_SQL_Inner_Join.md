@@ -65,22 +65,26 @@ ON Enrollment.CourseID = Course.CourseID;
 ```
 <br>
 <br>
-**Basic Idea**
+<strong>Basic Idea</strong>
 
 1. Firstly I need to connect Enrollment Table to Student Table.
 2. Secondly I need to connect Enrollment Table to Course Table.
 <br>
 <br>
 <br>
-**Why Student.Name?**
+<strong>Why Student.Name?</strong>
 
 Imagine a large Database where both tables have a column called StudentID.
 
 Writing:<br>
+```sql
 SELECT StudentID can confuse SQL.
+```
 
 Instead, specify the table:<br>
+```sql
 SELECT Student.StudentID
+```
 
 That means StudentID is specifically from Student Table not any other table.
 <br>
