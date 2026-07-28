@@ -1,5 +1,31 @@
 # Day 20 - EXISTS & NOT EXISTS
 
+## Introduction
+
+Consider the Student Table
+
+```text
++-----------+-------+
+| StudentID | Name  |
++-----------+-------+
+| 101       | Alice |
+| 102       | Bob   |
+| 103       | Mark  |
++-----------+-------+
+```
+
+Consider the Enrollment Table
+
+```text
++-----------+--------+
+| StudentID | Course |
++-----------+--------+
+| 101       | DBMS   |
+| 101       | AI     |
+| 103       | OS     |
++-----------+--------+
+```
+
 ## EXISTS
 
 Checks whether a subquery returns at least one row.
