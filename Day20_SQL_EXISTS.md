@@ -69,7 +69,17 @@ WHERE NOT EXISTS
 - EXISTS is useful for checking whether related data is present.
 
 ---
+Quiz Time
+Q1
 
+In one sentence:
+
+What does EXISTS do?
+
+Q2
+
+Which keyword returns rows where no matching records are found?
+---
 ## Summary
 
 - EXISTS → At least one matching row exists.
