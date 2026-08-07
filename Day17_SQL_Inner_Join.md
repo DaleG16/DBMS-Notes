@@ -44,12 +44,14 @@ Can we get it from just the Enrollment table?<br>
 We need to combine information from multiple tables. That's exactly what a JOIN does.
 
 **A JOIN combines rows from two or more related tables.**
+JOIN by itself means INNER JOIN in SQL.
 
 ---
 
 ## INNER JOIN
 
-INNER JOIN returns matching rows.
+INNER JOIN combines rows from two or more related tables and returns matching rows.
+INNER JOIN adds columns.
 
 Example:
 
@@ -63,25 +65,28 @@ ON Enrollment.StudentID = Student.StudentID
 INNER JOIN Course
 ON Enrollment.CourseID = Course.CourseID;
 ```
+
 <br>
 <br>
 <strong>Basic Idea</strong>
 
 1. Firstly I need to connect Enrollment Table to Student Table.
 2. Secondly I need to connect Enrollment Table to Course Table.
-<br>
-<br>
-<br>
-<strong>Why Student.Name?</strong>
+   <br>
+   <br>
+   <br>
+   <strong>Why Student.Name?</strong>
 
 Imagine a large Database where both tables have a column called StudentID.
 
 Writing:<br>
+
 ```sql
 SELECT StudentID can confuse SQL.
 ```
 
 Instead, specify the table:<br>
+
 ```sql
 SELECT Student.StudentID
 ```
@@ -131,15 +136,21 @@ The output:<br>
 +--------+----------+
 ```
 
+<br>
+
 ### Actual Display of the Output:<br>
 
 ![Inner join](/images/Inner_Join.png)
+
+<br>
+
+Coumns from both tables are combined.
 
 ---
 
 ## Summary
 
-- JOIN combines tables.
+- JOIN adds Columns.
 - INNER JOIN returns matching rows.
 - The ON clause defines how tables are connected.
 - Primary Keys and Foreign Keys make joins possible.
