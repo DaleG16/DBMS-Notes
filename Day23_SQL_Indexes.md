@@ -104,6 +104,16 @@ So you usually don't need to manually create another index on the primary key.
 
 ---
 
+### Important Point
+
+An index does not mean : "Every query using this column will definitely become faster."
+
+The database's query optimizer decides whether using the index is beneficial.
+
+For example, if a table has only 10 rows, scanning the table may be perfectly fine.
+
+---
+
 ## Key Idea
 
 VIEW:
