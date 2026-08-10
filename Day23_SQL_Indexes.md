@@ -71,6 +71,20 @@ FROM Student
 WHERE Name = 'Pablo';
 ```
 
+> For a table containing 1 million records, a full table scan may take ~100-500ms<br>
+> With index ~1-10ms 
+
+These are illustrative numbers, not fixed DBMS timings. <br>
+Actual performance depends on the database engine, hardware, cache, table structure,
+
+Don't think:<br>
+"Every column should have an index." ❌
+
+Instead:
+
+We create an index on a column when that column is **frequently used for searching, filtering, joining, or sorting**,<br>
+especially when the **table is large**.
+
 ---
 
 ### Primary Key and Indexes
@@ -104,11 +118,10 @@ So you usually don't need to manually create another index on the primary key.
 
 ---
 
-### Important Point
+### Important Points
 
-An index does not mean : "Every query using this column will definitely become faster."
-
-The database's query optimizer decides whether using the index is beneficial.
+- An index does not mean : "Every query using this column will definitely become faster."
+- The database's query optimizer decides whether using the index is beneficial.
 
 For example, if a table has only 10 rows, scanning the table may be perfectly fine.
 
