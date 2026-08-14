@@ -1,5 +1,27 @@
 # Day 25 - First Normal Form (1NF)
 
+## 📌 Introduction
+
+Before we can understand **First Normal Form (1NF)**, we need to understand why databases need to be normalized.
+
+In a poorly designed table, a single cell may contain **multiple values**. For example:
+
+| StudentID | Name | Courses |
+|---|---|---|
+| 101 | Pablo | DBMS, AI |
+| 102 | Alice | DBMS, OS |
+
+Here, the `Courses` column contains more than one value in a single cell.
+
+This creates problems when we want to:
+
+- 🔍 Search for a particular course
+- ✏️ Update a course
+- 🗑️ Delete a course
+- 📊 Filter or analyze the data
+- 🔗 Work with the data efficiently
+---
+
 ## Why Do We Need 1NF?
 
 Consider a table where multiple courses are stored inside one cell:
