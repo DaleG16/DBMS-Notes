@@ -55,7 +55,9 @@ But ask:
 
 <br>
 
-Two different students named Leo.
+> Note: The above table is just used to explain and is not a actual consistent data table.
+
+Same Student named Leo.
 
 1. StudentID 101 appears twice.<br>
    One StudentID corresponds to two different rows - NOT UNIQUE
