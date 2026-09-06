@@ -2,7 +2,7 @@
 
 ## Introduction
 
-**Super Key = Can uniquely identify** (It may contain extra attributes.)
+**Super Key = Can uniquely identify** (It may contain extra attributes.)<br>
 **Candidate Key = Can uniquely identify + Can't remove anything**
 
 ---
@@ -19,9 +19,9 @@
 | 104       | Emma   | 19  |
 | 105       | Pablo  | 20  |
 
-StudentID → identifies you ✅ (Nothing extra)
-StudentID + Name → also identifies you ✅ (extra attributes)
-StudentID + Name + Age → also identifies you ✅ (extra attributes)
+StudentID → identifies you ✅ (Nothing extra)<br>
+StudentID + Name → also identifies you ✅ (extra attributes)<br>
+StudentID + Name + Age → also identifies you ✅ (extra attributes)<br>
 
 <br>
 
@@ -31,15 +31,15 @@ But ask:
 
 1. For StudentID + Name:
 
-**Remove Name**, still with StudentID you can uniquely identify a row.
+   **Remove Name**, still with StudentID you can uniquely identify a row.<br>
+   It can still identify after removing
 
-It can still identify after removing
-
-So not a candidate key.
+   So not a candidate key.
 
 2. For StudentID:
 
-**Nothing to remove** and with studentID you can uniquely identify a row.
+   **Nothing to remove** and with studentID you can uniquely identify a row.
+   So it's a candidate key
 
 ---
 
@@ -72,13 +72,23 @@ Two different students named Leo.
 
    CANDIDATE KEY
 
+---
+
 <br>
+
+### In General
 
 `Every candidate key is a super key.`
 
 `But not every super key is a candidate key.`
 
 `Candidate Key ⊂ Super Keys`
+
+---
+
+## Primary Key vs Candidate key
+
+`Every Primary Key is a Candidate Key, but every Candidate Key is NOT necessarily the Primary Key`
 
 ---
 
