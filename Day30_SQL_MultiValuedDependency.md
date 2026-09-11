@@ -6,7 +6,21 @@ A multivalued dependency occurs in a relation when **one attribute** determines 
 
 A multivalued dependency always **requires at least three attributes** because it consists of at least two attributes that are dependent on a third.
 
-Ex:
+---
+
+### Trivial vs Non-Trivial
+
+**Trivial**
+
+A multivalued dependency X->>Y is trivial if Y is a subset of X, or if X and Y together make up all attributes in the relation.
+
+**Non-Trivial**
+
+It is non-trivial if X and Y are independent and separate sets of columns.
+
+---
+
+### Example
 
 ```
 | Course     | Instructor      | TextBook_Author |
@@ -26,12 +40,16 @@ For the same Course -> there is a set of TextBook_Authors.
 
 The Instructors and Authors have no relationship to each other; they are independent.
 
+---
+
 ### How it is represented?
 
 Using symbol: `->>`
 
 Course ->> Instructor<br>
 Course ->> TextBook_Author
+
+---
 
 ### Problem
 
