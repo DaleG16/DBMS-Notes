@@ -78,7 +78,7 @@ Example:
 
 ```sql
 DELETE FROM Student
-WHERE USN='4SO23AI024;
+WHERE USN='4SO23AI024';
 ```
 
 Output<br>
