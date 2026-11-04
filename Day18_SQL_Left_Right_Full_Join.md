@@ -110,9 +110,9 @@ Right JOIN Orders
 ON Users.userID = Orders.userID;
 ```
 
-**All rows from right table** - DBMS,AI and ML(No student)<br>
-**Matching rows from left table** - StudentID 1 and Student ID 3(Left Table) matches StudentID 1 and StudentID 3(Right Table).<br>
-Displays NULL for for missing value(No student for ML)
+**All rows from right table** - Laptop , Phone<br>
+**Matching rows from left table** - userID 1 and userID 3(Left Table) matches userID 1 and userID 3(Right Table).<br>
+Displays NULL for for missing value
 <br>
 <br>
 Output:<br>
