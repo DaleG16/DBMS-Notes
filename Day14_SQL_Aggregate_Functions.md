@@ -24,6 +24,16 @@ FROM Student;
 
 Output<br>
 ![Count](/images/count.png)
+<br>
+
+2. COUNT(column_name)<br>
+Counts only rows where that particular column is NOT NULL.
+<br>
+
+```sql
+SELECT COUNT(USN)
+FROM Student;
+```
 
 ---
 
