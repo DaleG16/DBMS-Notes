@@ -35,6 +35,8 @@ SELECT COUNT(USN)
 FROM Student;
 ```
 
+> Note: COUNT(*) - Includes NULL | COUNT(Column_name) - Excludes NULL
+
 ---
 
 # SUM()
