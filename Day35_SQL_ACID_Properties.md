@@ -77,7 +77,7 @@ The database is still in a valid state.
 **Case 2:** <br>
 
 ```text
-Pablo = ₹5,000
+Pablo = ₹1,000
 ```
 
 Transaction tries to withdraw ₹1,500.
