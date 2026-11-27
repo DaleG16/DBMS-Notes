@@ -81,15 +81,9 @@ This is the KING.
 
 # Database Languages
 
-- Four Types
+- 5 Types
 
-DDL
-↓
-DML
-↓
-DCL
-↓
-TCL
+DDL | DML | DCL | DQL | TCL
 
 ## DDL (Data Definition Language)
 
@@ -128,6 +122,13 @@ Commands:
 
 ---
 
+## DQL (Data Query Language)
+
+Used to read and retrieve data.<br>
+Command:
+
+-SELECT
+
 ## TCL (Transaction Control Language)
 
 Used to manage transactions.
@@ -157,4 +158,5 @@ Commands:
 - DDL changes structure.
 - DML changes data.
 - DCL manages permissions.
+- DQL retrieves data.
 - TCL manages transactions.
